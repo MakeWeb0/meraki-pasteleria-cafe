@@ -233,7 +233,7 @@
   gsap.from(".visita__map", { scale: 0.8, opacity: 0, duration: 1.4, ease: "expo.out", scrollTrigger: { trigger: ".visita__map", start: "top 80%", once: true } });
 
   /* ---------- Footer: el nombre sube desde abajo ---------- */
-  gsap.from(".foot__word", { yPercent: 50, ease: "none", scrollTrigger: { trigger: ".foot", start: "top bottom", end: "bottom bottom", scrub: true } });
+  gsap.from(".foot__word", { yPercent: 25, ease: "none", scrollTrigger: { trigger: ".foot", start: "top bottom", end: "bottom bottom", scrub: true } });
 
   window.addEventListener("load", () => ScrollTrigger.refresh());
 })();
