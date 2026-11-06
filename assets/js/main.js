@@ -225,7 +225,10 @@
   gsap.from(".pist__list li", { x: 40, opacity: 0, duration: 0.8, stagger: 0.06, ease: "power3.out", scrollTrigger: { trigger: ".pist__list", start: "top 85%", once: true } });
 
   /* ---------- Carrusel: entrada ---------- */
-  gsap.from(ring, { rotateX: -18, scale: 0.8, opacity: 0, duration: 1.6, ease: "expo.out", scrollTrigger: { trigger: c3d, start: "top 80%", once: true } });
+  // La entrada va en un envoltorio aparte: el aro lo mueve render() y no debe llevar opacity (aplana el 3D)
+  gsap.timeline({ scrollTrigger: { trigger: c3d, start: "top 80%", once: true } })
+    .from(".c3d__tilt", { rotateX: -18, scale: 0.8, duration: 1.6, ease: "expo.out" }, 0)
+    .from(c3d, { opacity: 0, duration: 0.8, ease: "power1.out" }, 0);
 
   /* ---------- Carta: los círculos entran uno a uno ---------- */
   gsap.from(".tab", { y: 40, opacity: 0, duration: 0.9, stagger: 0.07, ease: "back.out(1.6)", scrollTrigger: { trigger: ".tabs", start: "top 88%", once: true } });

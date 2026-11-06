@@ -201,8 +201,11 @@ html.menu-open .menu__side { opacity: 1; transform: none; transition-delay: 0.5s
 .c3d__cap { position: absolute; left: 12px; right: 12px; bottom: 12px; padding: 9px 12px; border-radius: 999px; background: color-mix(in oklab, var(--color-paper) 92%, transparent); color: var(--color-ink); font-size: 0.82rem; font-weight: 600; text-align: center; }
 .js .c3d { height: calc(var(--w) * 1.33 + 120px); perspective: 1700px; perspective-origin: 50% 40%; cursor: grab; touch-action: pan-y; user-select: none; }
 .js .c3d.is-drag { cursor: grabbing; }
+.js .c3d__tilt { position: absolute; inset: 0; transform-style: preserve-3d; }
 .js .c3d__ring { position: absolute; left: 50%; top: 50%; width: 0; height: 0; padding: 0; overflow: visible; transform-style: preserve-3d; }
-.js .c3d__card { position: absolute; width: var(--w); height: calc(var(--w) * 1.33); left: calc(var(--w) / -2); top: calc(var(--w) * -0.665); backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.js .c3d__card { position: absolute; width: var(--w); height: calc(var(--w) * 1.33); left: calc(var(--w) / -2); top: calc(var(--w) * -0.665); backface-visibility: hidden; -webkit-backface-visibility: hidden; overflow: visible; background: none; will-change: transform, opacity; }
+.js .c3d__card img { border-radius: 22px; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.js .c3d__cap { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .js .c3d__cap { opacity: 0; transform: translateY(8px); transition: opacity 0.4s, transform 0.4s var(--ease-soft); }
 .js .c3d__card.is-front .c3d__cap { opacity: 1; transform: none; }
 .c3d__now { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 10px; text-align: center; }
