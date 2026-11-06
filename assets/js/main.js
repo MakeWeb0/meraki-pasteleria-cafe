@@ -234,7 +234,10 @@
   gsap.from(".tab", { y: 40, opacity: 0, duration: 0.9, stagger: 0.07, ease: "back.out(1.6)", scrollTrigger: { trigger: ".tabs", start: "top 88%", once: true } });
 
   /* ---------- Opiniones ---------- */
-  gsap.from(".qcard", { y: 140, rotate: 0, opacity: 0, duration: 1.3, stagger: 0.16, ease: "expo.out", scrollTrigger: { trigger: ".op__cards", start: "top 80%", once: true } });
+  ScrollTrigger.batch(".rec", { start: "top 88%", once: true, onEnter: (els) => {
+    gsap.from(els, { y: 90, opacity: 0, duration: 1.2, stagger: 0.14, ease: "expo.out" });
+    gsap.from(els.map((el) => el.querySelector(".rec__pic")), { scale: 0.5, rotate: -40, duration: 1.4, stagger: 0.14, ease: "back.out(1.6)" });
+  } });
   gsap.from(".stars > *", { scale: 0, rotate: -90, duration: 0.7, stagger: 0.08, ease: "back.out(2)", scrollTrigger: { trigger: ".stars", start: "top 90%", once: true } });
 
   /* ---------- Visítanos ---------- */

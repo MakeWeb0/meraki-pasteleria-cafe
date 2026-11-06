@@ -102,7 +102,6 @@
   <div class="vitrina__pin">
     <div class="vitrina__track">
       <div class="vitrina__intro">
-        <p class="label label--light">La vitrina</p>
         <h2 class="vitrina__title">Lo que te espera en el mostrador</h2>
         <p class="vitrina__hint">Cookies, alfajores, croissants y hojaldres, cada uno con su precio.</p>
       </div>
@@ -169,18 +168,19 @@
 
 <!-- ============ OPINIONES ============ -->
 <section class="opiniones" id="opiniones">
-  <div class="wrap op__grid">
-    <div class="op__score">
-      <p class="label label--light">Opiniones</p>
-      <p class="op__big"><span data-count="4.8" data-dec="1">4,8</span></p>
-      <p class="stars" aria-label="4,8 de 5 estrellas"><svg aria-hidden="true"><use href="#star"/></svg><svg aria-hidden="true"><use href="#star"/></svg><svg aria-hidden="true"><use href="#star"/></svg><svg aria-hidden="true"><use href="#star"/></svg><span class="star-part" aria-hidden="true"><svg class="star-dim"><use href="#star"/></svg><svg class="star-fill"><use href="#star"/></svg></span></p>
-      <p class="op__small">en Google, con más de mil opiniones de quienes ya han pasado por aquí.</p>
+  <div class="wrap">
+    <div class="op__head">
+      <h2 class="op__title">Lo que piden los que repiten</h2>
+      <a class="op__score" href="https://www.google.com/maps/search/?api=1&query=Meraki+Pastelería+Café+Carrer+Periodista+Asunción+Valdés+7+Alicante" target="_blank" rel="noopener" aria-label="4,8 de 5 en Google. Leer las opiniones en Google Maps">
+        <span class="op__big" data-count="4.8" data-dec="1">4,8</span>
+        <span class="op__meta">
+          <span class="stars" aria-hidden="true"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><span class="star-part"><svg class="star-dim"><use href="#star"/></svg><svg class="star-fill"><use href="#star"/></svg></span></span>
+          <span class="op__count">Más de mil opiniones en Google</span>
+        </span>
+      </a>
     </div>
-    <div class="op__cards">
-      <figure class="qcard qcard--1"><blockquote>«Una cafetería encantadora con un trato muy amable. Recomiendo al 100%.»</blockquote><figcaption>Opinión en Google</figcaption></figure>
-      <figure class="qcard qcard--2"><blockquote>«Tienen gran variedad de tostadas, brunch y cosas dulces.»</blockquote><figcaption>Opinión en Google</figcaption></figure>
-      <figure class="qcard qcard--3"><blockquote>«El servicio muy atento. 10 sobre 10, voy a volver.»</blockquote><figcaption>Opinión en Google</figcaption></figure>
-    </div>
+    <ol class="op__list"><li class="rec rec--1"><div class="rec__pic"><img src="assets/img/tostadas-salmon.webp" width="382" height="510" alt="Tostadas con huevo poché y salmón" loading="lazy" decoding="async"><svg class="rings " viewBox="0 0 600 600" aria-hidden="true" focusable="false"><use href="#rings"/></svg></div><figure class="rec__q"><blockquote><p>«El brunch estaba exquisito, hacía tiempo que no probaba una granola tan rica y el Supremo Benedictino…»</p></blockquote><figcaption>A. M., en Google</figcaption></figure><a class="rec__dish" href="#carta-brunch"><span class="rec__try">Pídelo</span><span class="rec__name">Supremo Benedictino</span><span class="rec__price">12,70 €</span><svg aria-hidden="true"><use href="#arrow"/></svg></a></li><li class="rec rec--2"><div class="rec__pic"><img src="assets/img/v-crumble.webp" width="720" height="1280" alt="Tarta crumble de manzana entera" loading="lazy" decoding="async"><svg class="rings " viewBox="0 0 600 600" aria-hidden="true" focusable="false"><use href="#rings"/></svg></div><figure class="rec__q"><blockquote><p>«La tarta de manzana riquísima, es un estilo a la tarta de manzana holandesa.»</p></blockquote><figcaption>M. A., en Google</figcaption></figure><a class="rec__dish" href="#carta-tartas"><span class="rec__try">Pídelo</span><span class="rec__name">Crumble de manzana</span><span class="rec__price">5,00 €</span><svg aria-hidden="true"><use href="#arrow"/></svg></a></li><li class="rec rec--3"><div class="rec__pic"><img src="assets/img/gofre-nubes.webp" width="680" height="451" alt="Bubble gofre con chocolate, nubes y Oreo" loading="lazy" decoding="async"><svg class="rings " viewBox="0 0 600 600" aria-hidden="true" focusable="false"><use href="#rings"/></svg></div><figure class="rec__q"><blockquote><p>«Los bubbles están mejor con chocolate negro que con el blanco.»</p></blockquote><figcaption>M. A., en Google</figcaption></figure><a class="rec__dish" href="#carta-gofres"><span class="rec__try">Pídelo</span><span class="rec__name">Bubble gofre</span><span class="rec__price">4,50 €</span><svg aria-hidden="true"><use href="#arrow"/></svg></a></li><li class="rec rec--4"><div class="rec__pic"><img src="assets/img/mesa-cafes.webp" width="382" height="510" alt="Dos capuccinos con arte latte en la mesa" loading="lazy" decoding="async"><svg class="rings " viewBox="0 0 600 600" aria-hidden="true" focusable="false"><use href="#rings"/></svg></div><figure class="rec__q"><blockquote><p>«Una pastelería preciosa. Desayunamos muy bien en la terraza. ¡El café buenísimo!»</p></blockquote><figcaption>L. G., en Google</figcaption></figure><a class="rec__dish" href="#carta-cafe"><span class="rec__try">Pídelo</span><span class="rec__name">Café con leche</span><span class="rec__price">1,90 €</span><svg aria-hidden="true"><use href="#arrow"/></svg></a></li></ol>
+    <p class="op__more"><a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&query=Meraki+Pastelería+Café+Carrer+Periodista+Asunción+Valdés+7+Alicante" target="_blank" rel="noopener"><span>Leer todas en Google</span></a></p>
   </div>
 </section>
 
