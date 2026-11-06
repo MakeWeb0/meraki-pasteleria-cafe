@@ -176,7 +176,6 @@
   /* ---------- Apariciones ---------- */
   gsap.set(".rv", { y: 40, opacity: 0 });
   ScrollTrigger.batch(".rv", { start: "top 88%", once: true, onEnter: (b) => gsap.to(b, { y: 0, opacity: 1, duration: 1, stagger: 0.1, ease: "power3.out" }) });
-  $$(".label").forEach((l) => gsap.from(l, { x: -20, opacity: 0, duration: 0.9, ease: "power3.out", scrollTrigger: { trigger: l, start: "top 90%", once: true } }));
   $$(".h2, .vitrina__title, .carta__title").forEach((h) => gsap.from(h, { y: 60, opacity: 0, duration: 1.2, ease: "power4.out", scrollTrigger: { trigger: h, start: "top 88%", once: true } }));
 
   /* Frases que se "encienden" palabra a palabra */
@@ -192,11 +191,8 @@
       onUpdate: () => { el.textContent = o.v.toLocaleString("es-ES", { minimumFractionDigits: dec, maximumFractionDigits: dec }); } });
   });
 
-  /* Parallax de las fotos del local */
-  $$("[data-parallax]").forEach((el) => gsap.to(el, { yPercent: +el.dataset.parallax, ease: "none", scrollTrigger: { trigger: ".local", start: "top bottom", end: "bottom top", scrub: true } }));
-  gsap.from(".local__tall", { clipPath: "inset(100% 0 0 0 round 999px 999px 32px 32px)", duration: 1.6, ease: "expo.out", scrollTrigger: { trigger: ".local__pics", start: "top 80%", once: true } });
-  gsap.from(".local__round", { scale: 0.4, opacity: 0, duration: 1.4, ease: "back.out(1.3)", scrollTrigger: { trigger: ".local__pics", start: "top 70%", once: true } });
-  gsap.from(".badge", { scale: 0, rotate: -90, duration: 1.4, ease: "back.out(1.6)", scrollTrigger: { trigger: ".local__pics", start: "top 70%", once: true } });
+  /* El local: las fotos se destapan de abajo arriba */
+  $$(".local img").forEach((img) => gsap.from(img, { clipPath: "inset(100% 0 0 0 round 28px)", duration: 1.5, ease: "expo.out", scrollTrigger: { trigger: img, start: "top 85%", once: true } }));
 
   /* ---------- Vitrina: scroll horizontal ---------- */
   const mm = gsap.matchMedia();
@@ -216,13 +212,6 @@
   mm.add("(max-width: 899px)", () => {
     gsap.from(".vcard", { y: 50, opacity: 0, duration: 1, stagger: 0.1, ease: "power3.out", scrollTrigger: { trigger: ".vitrina__list", start: "top 85%", once: true } });
   });
-
-  /* ---------- Pistacho ---------- */
-  gsap.fromTo(".pist__word span", { xPercent: 6 }, { xPercent: -38, ease: "none", scrollTrigger: { trigger: ".pistacho", start: "top bottom", end: "bottom top", scrub: true } });
-  gsap.to(".pist__rings", { rotate: 200, ease: "none", scrollTrigger: { trigger: ".pistacho", start: "top bottom", end: "bottom top", scrub: true } });
-  gsap.from(".pist__main", { scale: 0.7, rotate: -20, opacity: 0, duration: 1.6, ease: "expo.out", scrollTrigger: { trigger: ".pist__stage", start: "top 75%", once: true } });
-  gsap.from(".pist__sat", { scale: 0, duration: 1.2, stagger: 0.15, ease: "back.out(1.8)", scrollTrigger: { trigger: ".pist__stage", start: "top 60%", once: true } });
-  gsap.from(".pist__list li", { x: 40, opacity: 0, duration: 0.8, stagger: 0.06, ease: "power3.out", scrollTrigger: { trigger: ".pist__list", start: "top 85%", once: true } });
 
   /* ---------- Carrusel: entrada ---------- */
   // La entrada va en un envoltorio aparte: el aro lo mueve render() y no debe llevar opacity (aplana el 3D)
