@@ -1,0 +1,39 @@
+:root {
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
+  --text-xs: 0.8125rem; --text-sm: 0.9375rem; --text-md: 1.0625rem; --text-lg: 1.25rem; --text-xl: 1.5625rem; --text-2xl: 1.953rem; --text-3xl: 2.441rem;
+  --text-display: clamp(2.75rem, 4.2vw + 0.9rem, 5rem);
+  --text-section: clamp(2.25rem, 3vw + 1rem, 4rem);
+  --text-title: clamp(1.25rem, 0.75vw + 0.95rem, 1.625rem);
+  --text-lead: clamp(1.125rem, 0.4vw + 1rem, 1.375rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 520ms;
+  --color-error: oklch(52% 0.19 27); --color-success: oklch(50% 0.12 150);
+  --container: 1320px; --gutter: 64px; --gap-columns: 64px; --section-gap-s: 96px; --section-gap: 128px; --section-gap-l: 160px;
+  --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
+
+  /* El logo de Meraki: disco rosa, tres anillos frambuesa, tinta negra. Las seis "historias" de su Instagram dan el resto. */
+  --color-paper: oklch(94.7% 0.028 1);      /* rosa del logo */
+  --color-paper-2: oklch(89.3% 0.049 1);    /* rubor */
+  --color-paper-3: oklch(95.5% 0.016 79);   /* crema de "Clientes" */
+  --color-ink: oklch(19.9% 0.010 356);      /* negro cálido de la M */
+  --color-ink-2: oklch(34.7% 0.038 50);     /* cacao de "Tartas" */
+  --color-muted: oklch(46% 0.03 20);
+  --color-rule: oklch(19.9% 0.010 356 / 0.16);
+  --color-accent: oklch(46.9% 0.122 1);     /* frambuesa oscura, para texto y botones */
+  --color-accent-ink: oklch(94.7% 0.028 1);
+  --color-focus: oklch(46.9% 0.122 1);
+  --color-ring: oklch(58.1% 0.112 3);       /* anillos del logo */
+  --color-crema: oklch(95.5% 0.016 79);
+  --color-beige: oklch(85.4% 0.043 82);     /* "Salado" */
+  --color-salvia: oklch(72.5% 0.039 158);   /* "Especiales" */
+  --color-caramelo: oklch(66.8% 0.086 66);  /* "Dulces" */
+  --color-cacao: oklch(34.7% 0.038 50);     /* "Tartas" */
+  --color-rosapalo: oklch(77.9% 0.062 358); /* "Ubicación" */
+  --color-frambuesa: oklch(46.9% 0.122 1);
+
+  --font-display: "Besley", "Rockwell", "Clarendon", ui-serif, Georgia, serif;
+  --font-body: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: "Mrs Saint Delafield", "Snell Roundhand", cursive;
+  --radius-card: 4px; --radius-pill: 999px; --rule-hair: 1px; --shadow-card: none;
+  --tracking-display: -0.015em;
+}
